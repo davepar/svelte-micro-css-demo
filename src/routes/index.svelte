@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
   /** @type {import('customers.Load} */
-  export async function load({ params, fetch, session, stuff }) {
+  export async function load({ fetch }) {
     const response = await fetch('./customers');
     return {
       status: response.status,
