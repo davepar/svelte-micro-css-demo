@@ -18,7 +18,7 @@
 
   export let data: {
     customers: Customer[];
-  };
+  } = {customers: []};
 
   let dialogOpen = false;
 
@@ -74,7 +74,7 @@
           <td>{customer.name}</td>
           <td>{Region[customer.region]}</td>
           <td>{Frequency[customer.frequency]}</td>
-          <td class="has-text-centered">{@html customer.newsletter ? '&#10003;' : ''}</td>
+          <td class="has-text-centered">{#if customer.newsletter}&#10003;{/if}</td>
         </tr>
       {/each}
     </tbody>
