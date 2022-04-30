@@ -44,13 +44,19 @@
   };
 </script>
 
-<div class="container">
+<svelte:head>
+  <title>Svelte with micro CSS</title>
+  <meta name="description" content="A demo of using the Bulma micro CSS libary" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+</svelte:head>
+
+<section class="section">
   <div class="content">
     <h1>Sample page for Svelte with a micro CSS framework</h1>
     <p>Visit <a href="https://kit.svelte.dev">web.site.here</a> for more info</p>
   </div>
   <div class="block">
-    <button type="button" class="button is-primary" on:click={openDialog}> Add Customer </button>
+    <button type="button" class="button is-primary" on:click={openDialog}>Add Customer</button>
   </div>
 
   <table class="table is-bordered">
@@ -73,7 +79,7 @@
       {/each}
     </tbody>
   </table>
-</div>
+</section>
 
 {#if dialogOpen}
   <div
